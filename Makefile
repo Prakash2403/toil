@@ -222,7 +222,7 @@ prepare: check_venv
 	setuptools==45.3.0 'sphinx>=2.4.4,<3' cwltest mypy
 
 check_venv:
-	@$(python) -c 'import sys, os; sys.exit( int( 0 if "VIRTUAL_ENV" in os.environ else 1 ) )' \
+	#@$(python) -c 'import sys, os; sys.exit( int( 0 if "VIRTUAL_ENV" in os.environ else 1 ) )' \
 		|| ( printf "$(red)A virtualenv must be active.$(normal)\n" ; false )
 
 check_clean_working_copy:
